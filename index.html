@@ -24,36 +24,57 @@
     <main>
 
         <!-- SECTION INFLUENCERS -->
-        <section id="influencers">
+<article class="article-tabla">
+    <h3>Tabla de Influencers</h3>
 
-            <h2>Influencers</h2>
-            
-            <article class="article-alta">
-                 <h3>Alta de Influencer</h3>
-                <button type="button" class="btn-agregar">Agregar influencer</button>
-            </article>
-            
-            <article class="article-form">
-                <h3>Datos del influencer a agregar</h3>
-                 <fieldset>
-                    <legend>Influencer</legend>
-                     <form>
-                        <label for="nombreInf">Nombre</label>
-                        <input type="text" id="nombreInf" placeholder="Ej: Ana García">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Mail</th>
+                <th>% Comisión</th>
+                <th>Total a Cobrar</th>
+                <th>Medallas</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
 
-                        <label for="mailInf">Mail</label>
-                        <input type="email" id="mailInf" placeholder="Ej: ana@gmail.com">
+        <tbody>
+            <tr>
+                <td>Ana García</td>
+                <td>ana@gmail.com</td>
+                <td>10%</td>
+                <td>$1500</td>
+                <td>🥇</td>
+                <td>
+                    <button type="button">Ver detalle</button>
+                </td>
+            </tr>
 
-                        <label for="comisionInf">% Comisión</label>
-                        <input type="number" id="comisionInf" placeholder="Ej: 10" min="0" max="100">
+            <tr>
+                <td>Juan Pérez</td>
+                <td>juan@gmail.com</td>
+                <td>15%</td>
+                <td>$2300</td>
+                <td>🏆</td>
+                <td>
+                    <button type="button">Ver detalle</button>
+                </td>
+            </tr>
 
-                        <button type="button" class="btn-cancelar">Cancelar</button>
-                        <button type="button" class="btn-agregar">Agregar</button>
-                     </form>
-                </fieldset>
-            </article>
-
-        </section>
+            <tr>
+                <td>María López</td>
+                <td>maria@gmail.com</td>
+                <td>8%</td>
+                <td>$0</td>
+                <td>❌</td>
+                <td>
+                    <button type="button">Ver detalle</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</article>
 
         <!-- SECTION ARTÍCULOS -->
         <section id="articulos">
