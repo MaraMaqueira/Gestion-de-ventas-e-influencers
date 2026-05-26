@@ -17,7 +17,7 @@
         <h1>Sistema de Gestión</h1>
 
         <p>
-            Autores: Mara Maqueira y Brian
+            Autores: Mara Maqueira y Brian del Pino
         </p>
     </header>
 
@@ -27,6 +27,31 @@
         <section id="influencers">
 
             <h2>Influencers</h2>
+            
+            <article class="article-alta">
+                 <h3>Alta de Influencer</h3>
+                <button type="button" class="btn-agregar">Agregar influencer</button>
+            </article>
+            
+            <article class="article-form">
+                <h3>Datos del influencer a agregar</h3>
+                 <fieldset>
+                    <legend>Influencer</legend>
+                     <form>
+                        <label for="nombreInf">Nombre</label>
+                        <input type="text" id="nombreInf" placeholder="Ej: Ana García">
+
+                        <label for="mailInf">Mail</label>
+                        <input type="email" id="mailInf" placeholder="Ej: ana@gmail.com">
+
+                        <label for="comisionInf">% Comisión</label>
+                        <input type="number" id="comisionInf" placeholder="Ej: 10" min="0" max="100">
+
+                        <button type="button" class="btn-cancelar">Cancelar</button>
+                        <button type="button" class="btn-agregar">Agregar</button>
+                     </form>
+                </fieldset>
+            </article>
 
         </section>
 
@@ -34,14 +59,79 @@
         <section id="articulos">
 
             <h2>Artículos</h2>
+        <article class="article-alta">
+             <h3>Alta de Artículo</h3>
+             <button type="button" class="btn-agregar">Agregar artículo</button>
+        </article>
 
+        <article class="article-form">
+            <h3>Datos del artículo a agregar</h3>
+            <fieldset>
+                <legend>Artículo</legend>
+                <form>
+                    <label for="codigoArt">Código</label>
+                    <input type="text" id="codigoArt" placeholder="Ej: A001">
+
+                    <label for="descArt">Descripción</label>
+                    <input type="text" id="descArt" placeholder="Ej: Remera algodón básica">
+
+                    <label for="precioArt">Precio</label>
+                    <input type="number" id="precioArt" placeholder="Ej: 1000" min="0">
+
+                    <button type="button" class="btn-cancelar">Cancelar</button>
+                    <button type="button" class="btn-agregar">Agregar</button>
+                </form>
+            </fieldset>
+    </article>
         </section>
 
         <!-- SECTION VENTAS -->
         <section id="ventas">
 
             <h2>Ventas</h2>
+        <article class="article-alta">
+            <h3>Alta de ventas</h3>
+            <button type="button" class="btn-agregar">Agregar venta</button>
+        </article>
 
+        <article class="article-form">
+            <h3>Datos de la venta a agregar</h3>
+            <fieldset>
+                <legend>Venta</legend>
+                <form>
+                    <label for="nroVenta">Nro</label>
+                    <input type="text" id="nroVenta" value="3" disabled>
+
+                    <label for="articuloVenta">Artículo</label>
+                    <select id="articuloVenta">
+                        <option value="A001">A001</option>
+                        <option value="A002">A002</option>
+                    </select>
+
+                    <label for="influencerVenta">Influencer</label>
+                    <select id="influencerVenta">
+                        <option value="ana">Ana Pérez</option>
+                        <option value="juan">Juan Gómez</option>
+                    </select>
+
+                    <label for="cantidadVenta">Cantidad</label>
+                    <input type="number" id="cantidadVenta" placeholder="Ej: 2" min="1">
+
+                    <label for="medioVenta">Medio</label>
+                    <select id="medioVenta">
+                        <option value="1">1-Instagram</option>
+                        <option value="2">2-YouTube</option>
+                        <option value="3">3-X</option>
+                        <option value="4">4-TikTok</option>
+                        <option value="5">5-Facebook</option>
+                        <option value="6">6-Otras</option>
+                    </select>
+
+                    <button type="button" class="btn-cancelar">Cancelar</button>
+                    <button type="button" class="btn-agregar">Agregar</button>
+                </form>
+            </fieldset>
+        </article>
         </section>
 
     </main>
@@ -56,7 +146,7 @@
         </p>
 
         <p>
-            Brian -
+            Brian del Pino -
             <a href="https://www.ort.edu.uy" target="_blank">
                 ORT Uruguay
             </a>
