@@ -1,6 +1,8 @@
-/* ==========================
-   RESET
-========================== */
+/*==================================
+AUTORES:
+Mara Maqueira
+Brian del Pino
+==================================*/
 
 *{
     margin:0;
@@ -9,44 +11,38 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#efefef;
-    color:#222;
+    background:#d8d8d8;
+    font-family:Arial, Helvetica, sans-serif;
     font-size:11px;
-    line-height:1.3;
+    color:#222;
 }
 
-/* ==========================
-   HEADER
-========================== */
+/* HEADER */
 
 header{
     background:#7a7a7a;
-    height:16px;
-    display:flex;
-    align-items:center;
-    padding-left:6px;
-    border-bottom:1px solid #6c6c6c;
+    height:26px;
+    line-height:26px;
+    padding-left:10px;
 }
 
 header h1{
-    font-size:10px;
-    font-weight:700;
-    color:#000;
+    font-size:13px;
+    font-weight:bold;
+    color:black;
 }
 
-/* ==========================
-   MAIN
-========================== */
+/* CONTENIDO */
 
 main{
-    width:95%;
-    margin:12px auto;
+    width:98%;
+    margin:8px auto;
 }
 
+/* SECCIONES */
+
 section{
-    background:#f3f3f3;
-    padding:12px;
+    padding:8px 0;
     border-bottom:8px solid #707070;
 }
 
@@ -54,76 +50,53 @@ section:last-child{
     border-bottom:none;
 }
 
-/* ==========================
-   TITULOS
-========================== */
+/* TITULOS */
 
 h2{
     font-size:13px;
-    margin-bottom:12px;
+    margin:5px 0 8px 10px;
     font-weight:bold;
 }
 
 h3{
     font-size:10px;
-    margin-bottom:8px;
+    margin-bottom:6px;
     font-weight:bold;
 }
 
-/* ==========================
-   BLOQUES GRISES
-========================== */
+/* BLOQUES */
 
 .article-alta,
 .article-form,
 .article-tabla,
-.article-grafico,
-.article-popup{
-    background:#e5e5e5;
-    padding:12px;
-    margin-bottom:12px;
-    border:1px solid #dddddd;
+.article-grafico{
+    background:white;
+    margin:8px;
+    padding:10px;
+    border:1px solid #d4d4d4;
 }
 
-/* ==========================
-   BOTONES
-========================== */
-
-button{
-    cursor:pointer;
-    font-size:9px;
-    border:none;
-}
+/* BOTONES */
 
 .btn-agregar,
 .btn-cancelar,
 .btn-ventas,
 .btn-ordenar,
 .btn-eliminar{
-    background:#1ca6b8;
+    background:#18a8b6;
     color:white;
+    border:none;
     border-radius:3px;
-    padding:4px 10px;
-    font-size:9px;
-    min-width:55px;
-}
-
-.btn-agregar:hover,
-.btn-cancelar:hover,
-.btn-ventas:hover,
-.btn-ordenar:hover{
-    background:#1694a5;
+    font-size:10px;
+    padding:4px 12px;
+    cursor:pointer;
 }
 
 .btn-eliminar{
-    width:20px;
-    min-width:20px;
-    padding:4px;
+    padding:3px 7px;
 }
 
-/* ==========================
-   FORMULARIOS
-========================== */
+/* FORMULARIOS */
 
 fieldset{
     border:none;
@@ -141,114 +114,89 @@ form{
 }
 
 label{
-    font-size:9px;
+    font-size:10px;
 }
 
 input,
 select{
     height:18px;
-    border:1px solid #bdbdbd;
+    border:1px solid #999;
     background:white;
-    font-size:9px;
+    font-size:10px;
     padding:2px 4px;
 }
 
-input[type=text],
-input[type=email]{
-    width:95px;
+#nombreInf,
+#mailInf,
+#descArt{
+    width:120px;
 }
 
-input[type=number]{
-    width:60px;
+#comisionInf,
+#precioArt,
+#cantidadVenta{
+    width:55px;
 }
 
-select{
-    width:95px;
+#codigoArt{
+    width:65px;
 }
 
-/* ==========================
-   TABLAS
-========================== */
+/* TABLAS */
 
 table{
     border-collapse:collapse;
     background:white;
-    margin-top:5px;
-    font-size:9px;
+    margin-top:8px;
 }
 
 th{
-    background:#d9d9d9;
-    border:1px solid #8e8e8e;
-    padding:4px 6px;
-    text-align:center;
-    font-weight:bold;
+    background:#d7d7d7;
+    border:1px solid #7e7e7e;
+    padding:4px 8px;
+    font-size:10px;
 }
 
 td{
-    border:1px solid #8e8e8e;
-    padding:4px 6px;
-    text-align:center;
+    border:1px solid #7e7e7e;
+    padding:4px 8px;
+    font-size:10px;
 }
 
 tbody tr{
     background:white;
 }
 
-/* ==========================
-   LEYENDAS
-========================== */
+/* LEYENDAS */
 
 .leyenda{
     margin-top:8px;
-    font-size:8px;
+    font-size:9px;
 }
 
-/* ==========================
-   POPUP SIMULADO
-========================== */
-
-.popup-simulado{
-    background:white;
-    border:1px solid #bcbcbc;
-    padding:10px;
-    width:350px;
-}
-
-.popup-simulado p{
-    margin-bottom:5px;
-}
-
-/* ==========================
-   GRAFICO BURBUJAS
-========================== */
+/* GRAFICO */
 
 .grafico-placeholder{
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:flex-end;
-    margin-top:15px;
-}
-
-.burbuja-contenedor{
-    text-align:center;
-    width:90px;
+    min-height:150px;
 }
 
 .burbuja{
     border-radius:50%;
-    background:#1ca6b8;
+    background:#18a8b6;
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
     margin:auto;
-    font-size:10px;
+    font-weight:bold;
 }
 
 .burbuja-chica{
-    width:35px;
-    height:35px;
+    width:30px;
+    height:30px;
 }
 
 .burbuja-med{
@@ -266,27 +214,29 @@ tbody tr{
     height:95px;
 }
 
-.burbuja-contenedor p{
-    margin-top:5px;
-    font-size:8px;
+.burbuja-contenedor{
+    text-align:center;
 }
 
-/* ==========================
-   FOOTER
-========================== */
+.burbuja-contenedor p{
+    margin-top:4px;
+    font-size:9px;
+}
+
+/* FOOTER */
 
 footer{
-    background:#e6e6e6;
+    background:#7a7a7a;
     padding:10px;
-    border-top:1px solid #cfcfcf;
+    margin-top:10px;
 }
 
 footer p{
-    font-size:9px;
+    font-size:10px;
+    color:black;
     margin-bottom:3px;
 }
 
 footer a{
-    color:#1ca6b8;
-    text-decoration:none;
+    color:#005d9e;
 }
