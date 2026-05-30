@@ -3,9 +3,12 @@
   Mara Maqueira
   Brian del Pino
   Materia: Programación I - ORT Uruguay
+  Descripción: Estilos para el Sistema de Gestión de Ventas e Influencers
 */
 
-/* ===== RESET Y BASE ===== */
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
 
 * {
   box-sizing: border-box;
@@ -13,52 +16,65 @@
   padding: 0;
 }
 
+/* ============================================================
+   BODY - fondo gris oscuro de toda la página
+   ============================================================ */
+
 body {
+  background-color: #808080;
   font-family: Arial, sans-serif;
   font-size: 13px;
-  background-color: #d9d9d9;
-  color: #222;
+  color: #000000;
 }
 
-/* ===== HEADER ===== */
+/* ============================================================
+   HEADER - barra oscura con texto blanco y apellidos
+   ============================================================ */
 
 header {
-  background-color: #555555;
+  background-color: #333333;
   color: #ffffff;
-  padding: 6px 14px;
-  font-size: 14px;
-  font-weight: bold;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: normal;
 }
 
-/* ===== MAIN ===== */
+/* ============================================================
+   MAIN - contenedor centrado sobre el fondo gris
+   ============================================================ */
 
 main {
-  padding: 10px 12px;
+  margin: 0;
+  padding: 0;
 }
 
-/* ===== SECTIONS ===== */
+/* ============================================================
+   SECTIONS - bloques blancos separados entre sí
+   ============================================================ */
 
 section {
-  background-color: #ececec;
-  border: 1px solid #bbbbbb;
-  margin-bottom: 12px;
-  padding: 10px 12px;
+  background-color: #ffffff;
+  margin: 12px 10px;
+  padding: 14px 16px;
+  border: 1px solid #b0b0b0;
 }
 
 section > h2 {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 8px;
-  color: #222;
+  margin-bottom: 10px;
+  color: #000000;
 }
 
-/* ===== ARTICLES ===== */
+/* ============================================================
+   ARTICLES - artículos dentro de cada section
+   ============================================================ */
 
 article {
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   border: 1px solid #cccccc;
-  margin-bottom: 8px;
-  padding: 8px 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
 }
 
 article:last-child {
@@ -68,14 +84,16 @@ article:last-child {
 article h3 {
   font-size: 12px;
   font-weight: bold;
-  margin-bottom: 6px;
-  color: #333;
+  margin-bottom: 8px;
+  color: #000000;
 }
 
-/* ===== FIELDSET Y LEGEND ===== */
+/* ============================================================
+   FIELDSET Y LEGEND
+   ============================================================ */
 
 fieldset {
-  border: 1px solid #bbbbbb;
+  border: 1px solid #cccccc;
   padding: 6px 10px;
   background-color: #ffffff;
 }
@@ -83,187 +101,196 @@ fieldset {
 legend {
   font-size: 12px;
   font-weight: bold;
+  color: #000000;
   padding: 0 4px;
-  color: #222;
 }
 
-/* ===== FORMULARIOS ===== */
+/* ============================================================
+   FORMULARIOS
+   ============================================================ */
 
 form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px 6px;
+  gap: 4px 8px;
 }
 
 label {
   font-size: 12px;
-  color: #333;
+  color: #000000;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
 select {
-  border: 1px solid #aaaaaa;
+  border: 1px solid #999999;
   padding: 3px 5px;
   font-size: 12px;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
-  color: #222;
+  color: #000000;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 select:focus {
-  outline: 1px solid #17a8b0;
+  outline: 1px solid #26b5bb;
 }
 
-input[disabled] {
-  background-color: #eeeeee;
-  color: #666;
+input[type="text"][disabled],
+input[type="number"][disabled] {
+  background-color: #e8e8e8;
+  color: #555555;
 }
 
-/* ===== BOTONES ===== */
+/* ============================================================
+   BOTONES - todos teal (color exacto de las imágenes)
+   ============================================================ */
 
 button {
   font-family: Arial, sans-serif;
   font-size: 12px;
+  font-weight: normal;
+  background-color: #26b5bb;
+  color: #ffffff;
   border: none;
   padding: 4px 10px;
-  cursor: pointer;
   border-radius: 3px;
+  cursor: pointer;
 }
 
-.btn-agregar {
-  background-color: #17a8b0;
-  color: #ffffff;
+button:hover {
+  background-color: #1e9ea4;
 }
 
-.btn-agregar:hover {
-  background-color: #138f96;
-}
-
+/* Botón cancelar - mismo estilo base teal */
 .btn-cancelar {
-  background-color: #aaaaaa;
+  background-color: #26b5bb;
   color: #ffffff;
 }
 
 .btn-cancelar:hover {
-  background-color: #888888;
+  background-color: #1e9ea4;
 }
 
+/* Botón eliminar - teal (como en la imagen, no rojo) */
 .btn-eliminar {
-  background-color: #d9534f;
+  background-color: #26b5bb;
   color: #ffffff;
   padding: 3px 8px;
   font-size: 11px;
 }
 
 .btn-eliminar:hover {
-  background-color: #b52b27;
+  background-color: #1e9ea4;
 }
 
+/* Botón ventas */
 .btn-ventas {
-  background-color: #17a8b0;
+  background-color: #26b5bb;
   color: #ffffff;
   font-size: 11px;
   padding: 3px 8px;
 }
 
 .btn-ventas:hover {
-  background-color: #138f96;
+  background-color: #1e9ea4;
 }
 
+/* Botón ordenar dentro del th de tabla */
 .btn-ordenar {
-  background-color: #17a8b0;
+  background-color: #26b5bb;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 11px;
   padding: 3px 8px;
   border-radius: 3px;
-  border: none;
-  cursor: pointer;
 }
 
 .btn-ordenar:hover {
-  background-color: #138f96;
+  background-color: #1e9ea4;
 }
 
-/* ===== TABLAS ===== */
+/* ============================================================
+   TABLAS
+   ============================================================ */
 
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 12px;
-  margin-bottom: 5px;
-  background-color: #ffffff;
+  margin-bottom: 6px;
 }
 
 thead {
-  background-color: #17a8b0;
+  background-color: #26b5bb;
   color: #ffffff;
 }
 
 thead th {
   padding: 5px 8px;
   text-align: left;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 12px;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f0f0f0;
+tbody tr {
+  border-bottom: 1px solid #dddddd;
 }
 
-tbody tr:hover {
-  background-color: #e0f4f5;
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
 }
 
 tbody td {
   padding: 4px 8px;
-  border-bottom: 1px solid #dddddd;
-  color: #222;
+  color: #000000;
+  vertical-align: middle;
 }
 
-/* ===== LEYENDA ===== */
+/* ============================================================
+   LEYENDA
+   ============================================================ */
 
 .leyenda {
   font-size: 11px;
-  color: #555;
-  margin-top: 4px;
+  color: #444444;
+  margin-top: 5px;
 }
 
-/* ===== POPUP SIMULADO ===== */
+/* ============================================================
+   POPUP SIMULADO
+   ============================================================ */
 
 .popup-simulado {
   background-color: #ffffff;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #cccccc;
   padding: 10px 14px;
   max-width: 420px;
   font-size: 12px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 }
 
 .popup-simulado p {
-  margin-bottom: 3px;
-  color: #222;
+  margin-bottom: 4px;
+  color: #000000;
 }
 
 .popup-simulado button {
   margin-top: 8px;
 }
 
-/* ===== GRÁFICO DE BURBUJAS ===== */
+/* ============================================================
+   GRÁFICO DE BURBUJAS - estructura visual
+   ============================================================ */
 
 .grafico-placeholder {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  padding: 16px 8px 8px;
-  min-height: 120px;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
+  padding: 20px 10px 10px;
+  min-height: 110px;
 }
 
 .burbuja-contenedor {
@@ -276,7 +303,7 @@ tbody td {
 
 .burbuja-contenedor p {
   font-size: 11px;
-  color: #444;
+  color: #333333;
   text-align: center;
 }
 
@@ -288,31 +315,53 @@ tbody td {
   font-size: 10px;
   font-weight: bold;
   color: #ffffff;
-  background-color: #17a8b0;
+  background-color: #26b5bb;
 }
 
-.burbuja-chica  { width: 20px;  height: 20px;  font-size: 9px; }
-.burbuja-med    { width: 44px;  height: 44px; }
-.burbuja-grande { width: 64px;  height: 64px; }
-.burbuja-max    { width: 90px;  height: 90px;  font-size: 11px; }
+.burbuja-chica {
+  width: 18px;
+  height: 18px;
+  font-size: 9px;
+}
 
-/* ===== FOOTER ===== */
+.burbuja-med {
+  width: 40px;
+  height: 40px;
+}
+
+.burbuja-grande {
+  width: 60px;
+  height: 60px;
+}
+
+.burbuja-max {
+  width: 85px;
+  height: 85px;
+  font-size: 11px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 footer {
-  background-color: #444444;
-  color: #dddddd;
+  background-color: #ffffff;
   padding: 10px 14px;
   font-size: 12px;
-  text-align: center;
-  line-height: 1.8;
+  color: #000000;
+  margin: 0 10px 12px 10px;
+  border: 1px solid #b0b0b0;
+}
+
+footer p {
+  margin-bottom: 4px;
 }
 
 footer a {
-  color: #17a8b0;
+  color: #26b5bb;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
-  color: #ffffff;
 }
