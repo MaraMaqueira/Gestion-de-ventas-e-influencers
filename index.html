@@ -20,10 +20,7 @@
 
     <header>
         <h1>Sistema de Gestión</h1>
-
-        <p>
-            Autores: Mara Maqueira y Brian del Pino
-        </p>
+        <p>Autores: Mara Maqueira y Brian del Pino</p>
     </header>
 
     <main>
@@ -81,9 +78,9 @@
                             <td>ana@gmail.com</td>
                             <td>10%</td>
                             <td>$1500</td>
-                            <td>🥇</td>
+                            <td>🔥</td>
                             <td>
-                                <button type="button">Ver detalle</button>
+                                <button type="button" class="btn-ventas">Ver detalle</button>
                             </td>
                         </tr>
 
@@ -92,9 +89,9 @@
                             <td>juan@gmail.com</td>
                             <td>15%</td>
                             <td>$2300</td>
-                            <td>🏆</td>
+                            <td>🔥🟢</td>
                             <td>
-                                <button type="button">Ver detalle</button>
+                                <button type="button" class="btn-ventas">Ver detalle</button>
                             </td>
                         </tr>
 
@@ -103,13 +100,31 @@
                             <td>maria@gmail.com</td>
                             <td>8%</td>
                             <td>$0</td>
-                            <td>❌</td>
+                            <td>🔵</td>
                             <td>
-                                <button type="button">Ver detalle</button>
+                                <button type="button" class="btn-ventas">Ver detalle</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+
+                <p class="leyenda">
+                    Información:
+                    🔥 Top comisión (cobra más $)
+                    🔵 Cero ventas
+                    🟢 Venta más cara (mayor monto en una sola venta)
+                </p>
+            </article>
+
+            <!-- POPUP SIMULADO (visual estático) -->
+            <article class="article-popup">
+                <h3>Ejemplo de popup - Detalle de comisión</h3>
+                <div class="popup-simulado">
+                    <p><strong>Ventas:</strong></p>
+                    <p>Nro 1 → 3 × Remera → $1000 c/u Total $3000 → Comisión: $300</p>
+                    <p>Nro 2 → 2 × Gorra → $750 c/u Total $1500 → Comisión: $150</p>
+                    <button type="button" class="btn-agregar">Aceptar</button>
+                </div>
             </article>
 
         </section>
@@ -152,7 +167,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Código</th>
+                            <th><button type="button" class="btn-ordenar">Código ↕</button></th>
                             <th>Descripción</th>
                             <th>Precio</th>
                             <th>Medalla</th>
@@ -164,7 +179,7 @@
                             <td>A001</td>
                             <td>Remera algodón básica</td>
                             <td>$1000</td>
-                            <td>🥇</td>
+                            <td>⭐</td>
                         </tr>
 
                         <tr>
@@ -182,6 +197,10 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <p class="leyenda">
+                    Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)
+                </p>
             </article>
 
         </section>
@@ -210,16 +229,18 @@
                         <select id="articuloVenta">
                             <option value="A001">A001</option>
                             <option value="A002">A002</option>
+                            <option value="A003">A003</option>
                         </select>
 
                         <label for="influencerVenta">Influencer</label>
                         <select id="influencerVenta">
-                            <option value="ana">Ana Pérez</option>
-                            <option value="juan">Juan Gómez</option>
+                            <option value="ana">Ana García</option>
+                            <option value="juan">Juan Pérez</option>
+                            <option value="maria">María López</option>
                         </select>
 
                         <label for="cantidadVenta">Cantidad</label>
-                        <input type="number" id="cantidadVenta" min="1">
+                        <input type="number" id="cantidadVenta" placeholder="Ej: 2" min="1">
 
                         <label for="medioVenta">Medio</label>
                         <select id="medioVenta">
@@ -248,7 +269,7 @@
                             <th>Influencer</th>
                             <th>Medio</th>
                             <th>Cantidad</th>
-                            <th>Eliminar</th>
+                            <th>Acción</th>
                         </tr>
                     </thead>
 
@@ -259,7 +280,7 @@
                             <td>Ana García</td>
                             <td>1-Instagram</td>
                             <td>3</td>
-                            <td><button type="button">Eliminar</button></td>
+                            <td><button type="button" class="btn-eliminar">✕</button></td>
                         </tr>
 
                         <tr>
@@ -268,7 +289,7 @@
                             <td>Juan Pérez</td>
                             <td>2-YouTube</td>
                             <td>1</td>
-                            <td><button type="button">Eliminar</button></td>
+                            <td><button type="button" class="btn-eliminar">✕</button></td>
                         </tr>
 
                         <tr>
@@ -277,15 +298,40 @@
                             <td>María López</td>
                             <td>4-TikTok</td>
                             <td>5</td>
-                            <td><button type="button">Eliminar</button></td>
+                            <td><button type="button" class="btn-eliminar">✕</button></td>
                         </tr>
                     </tbody>
                 </table>
             </article>
 
             <article class="article-grafico">
-                <h3>Gráfico de Ventas por Medio</h3>
-                <p>Aquí se mostrará el gráfico de burbujas.</p>
+                <h3>Gráfico de burbujas</h3>
+                <div class="grafico-placeholder">
+                    <div class="burbuja-contenedor">
+                        <div class="burbuja burbuja-grande">9000</div>
+                        <p>1 - Instagram</p>
+                    </div>
+                    <div class="burbuja-contenedor">
+                        <div class="burbuja burbuja-chica">0</div>
+                        <p>2 - YouTube</p>
+                    </div>
+                    <div class="burbuja-contenedor">
+                        <div class="burbuja burbuja-max">24000</div>
+                        <p>3 - X</p>
+                    </div>
+                    <div class="burbuja-contenedor">
+                        <div class="burbuja burbuja-chica">0</div>
+                        <p>4 - TikTok</p>
+                    </div>
+                    <div class="burbuja-contenedor">
+                        <div class="burbuja burbuja-med">3000</div>
+                        <p>5 - Facebook</p>
+                    </div>
+                    <div class="burbuja-contenedor">
+                        <div class="burbuja burbuja-chica">0</div>
+                        <p>6 - Otras</p>
+                    </div>
+                </div>
             </article>
 
         </section>
@@ -293,17 +339,14 @@
     </main>
 
     <footer>
-
         <p>
             Mara Maqueira -
             <a href="https://www.ort.edu.uy" target="_blank">ORT Uruguay</a>
         </p>
-
         <p>
             Brian del Pino -
             <a href="https://www.ort.edu.uy" target="_blank">ORT Uruguay</a>
         </p>
-
     </footer>
 
 </body>
