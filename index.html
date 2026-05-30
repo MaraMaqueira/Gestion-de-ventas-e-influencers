@@ -1,354 +1,318 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
     Autores:
     Mara Maqueira
     Brian del Pino
-    -->
-
-    <title>Sistema de Gestión</title>
-
-    <link rel="stylesheet" href="css/estilos.css">
+    Materia: Programación I - ORT Uruguay
+  -->
+  <title>Sistema de Gestión</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Sistema de Gestión</h1>
-        <p>Autores: Mara Maqueira y Brian del Pino</p>
-    </header>
+<header>
+  <h1>Sistema de Gestión</h1>
+</header>
 
-    <main>
+<main>
 
-        <!-- SECTION INFLUENCERS -->
-        <section id="influencers">
+  <!-- ===================== SECTION INFLUENCERS ===================== -->
+  <section id="influencers">
+    <h2>Manejo de Influencers</h2>
 
-            <h2>Influencers</h2>
+    <article class="article-alta">
+      <h3>Alta de Influencer</h3>
+      <button type="button" class="btn-agregar">Agregar influencer</button>
+    </article>
 
-            <article class="article-alta">
-                <h3>Alta de Influencer</h3>
-                <button type="button" class="btn-agregar">Agregar influencer</button>
-            </article>
+    <article class="article-form">
+      <h3>Datos del influencer a agregar</h3>
+      <fieldset>
+        <legend>Influencer</legend>
+        <form>
+          <label for="nombreInf">Nombre</label>
+          <input type="text" id="nombreInf" placeholder="Ej: Ana García">
 
-            <article class="article-form">
-                <h3>Datos del influencer a agregar</h3>
+          <label for="mailInf">Mail</label>
+          <input type="email" id="mailInf" placeholder="Ej: ana@gmail.com">
 
-                <fieldset>
-                    <legend>Influencer</legend>
+          <label for="comisionInf">% Comisión</label>
+          <input type="number" id="comisionInf" placeholder="Ej: 10" min="0" max="100">
 
-                    <form>
-                        <label for="nombreInf">Nombre</label>
-                        <input type="text" id="nombreInf" placeholder="Ej: Ana García">
+          <button type="button" class="btn-cancelar">Cancelar</button>
+          <button type="button" class="btn-agregar">Agregar</button>
+        </form>
+      </fieldset>
+    </article>
 
-                        <label for="mailInf">Mail</label>
-                        <input type="email" id="mailInf" placeholder="Ej: ana@gmail.com">
+    <article class="article-tabla">
+      <h3>Tabla de Influencers</h3>
+      <table>
+        <thead>
+          <tr>
+            <th><button type="button" class="btn-ordenar">Nombre ↕</button></th>
+            <th>Email</th>
+            <th>% Comisión</th>
+            <th>Total a cobrar</th>
+            <th>Etiquetas</th>
+            <th>Detalle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ana García</td>
+            <td>ana@gmail.com</td>
+            <td>10%</td>
+            <td>$1200</td>
+            <td>🔥</td>
+            <td><button type="button" class="btn-ventas">Ventas</button></td>
+          </tr>
+          <tr>
+            <td>Beatriz Lopez</td>
+            <td>bea@gmail.com</td>
+            <td>5%</td>
+            <td>$1200</td>
+            <td>🟢🔥</td>
+            <td><button type="button" class="btn-ventas">Ventas</button></td>
+          </tr>
+          <tr>
+            <td>Luis Gomez</td>
+            <td>luis@gmail.com</td>
+            <td>90%</td>
+            <td>$0</td>
+            <td>🔵</td>
+            <td><button type="button" class="btn-ventas">Ventas</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="leyenda">
+        Información:
+        🔥 Top comisión (cobra más $)
+        🔵 Cero ventas
+        🟢 Venta más cara (mayor monto en una sola venta)
+      </p>
+    </article>
 
-                        <label for="comisionInf">% Comisión</label>
-                        <input type="number" id="comisionInf" placeholder="Ej: 10" min="0" max="100">
+    <!-- Popup simulado-->
+    <article class="article-popup">
+      <h3>Ejemplo de detalle de comisión (popup)</h3>
+      <div class="popup-simulado">
+        <p><strong>Ventas:</strong></p>
+        <p>Nro 2 → 1×Silla → $3000 c/u Total $3000 → Comisión: $300</p>
+        <p>Nro 4 → 2×Silla → $3000 c/u Total $6000 → Comisión: $600</p>
+        <p>Nro 5 → 1×Silla → $3000 c/u Total $3000 → Comisión: $300</p>
+        <button type="button" class="btn-agregar">Aceptar</button>
+      </div>
+    </article>
 
-                        <button type="button" class="btn-cancelar">Cancelar</button>
-                        <button type="button" class="btn-agregar">Agregar</button>
-                    </form>
-                </fieldset>
-            </article>
+  </section>
 
-            <article class="article-tabla">
-                <h3>Tabla de Influencers</h3>
+  <!-- ===================== SECTION ARTÍCULOS ===================== -->
+  <section id="articulos">
+    <h2>Manejo de Artículos</h2>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Mail</th>
-                            <th>% Comisión</th>
-                            <th>Total a Cobrar</th>
-                            <th>Medallas</th>
-                            <th>Detalle</th>
-                        </tr>
-                    </thead>
+    <article class="article-alta">
+      <h3>Alta de Artículo</h3>
+      <button type="button" class="btn-agregar">Agregar artículo</button>
+    </article>
 
-                    <tbody>
-                        <tr>
-                            <td>Ana García</td>
-                            <td>ana@gmail.com</td>
-                            <td>10%</td>
-                            <td>$1500</td>
-                            <td>🔥</td>
-                            <td>
-                                <button type="button" class="btn-ventas">Ver detalle</button>
-                            </td>
-                        </tr>
+    <article class="article-form">
+      <h3>Datos del artículo a agregar</h3>
+      <fieldset>
+        <legend>Artículo</legend>
+        <form>
+          <label for="codigoArt">Código</label>
+          <input type="text" id="codigoArt" placeholder="Ej: A001">
 
-                        <tr>
-                            <td>Juan Pérez</td>
-                            <td>juan@gmail.com</td>
-                            <td>15%</td>
-                            <td>$2300</td>
-                            <td>🔥🟢</td>
-                            <td>
-                                <button type="button" class="btn-ventas">Ver detalle</button>
-                            </td>
-                        </tr>
+          <label for="descArt">Descripción</label>
+          <input type="text" id="descArt" placeholder="Ej: Remera algodón básica">
 
-                        <tr>
-                            <td>María López</td>
-                            <td>maria@gmail.com</td>
-                            <td>8%</td>
-                            <td>$0</td>
-                            <td>🔵</td>
-                            <td>
-                                <button type="button" class="btn-ventas">Ver detalle</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <label for="precioArt">Precio</label>
+          <input type="number" id="precioArt" placeholder="Ej: 1000" min="0">
 
-                <p class="leyenda">
-                    Información:
-                    🔥 Top comisión (cobra más $)
-                    🔵 Cero ventas
-                    🟢 Venta más cara (mayor monto en una sola venta)
-                </p>
-            </article>
+          <button type="button" class="btn-cancelar">Cancelar</button>
+          <button type="button" class="btn-agregar">Agregar</button>
+        </form>
+      </fieldset>
+    </article>
 
-            <!-- POPUP SIMULADO (visual estático) -->
-            <article class="article-popup">
-                <h3>Ejemplo de popup - Detalle de comisión</h3>
-                <div class="popup-simulado">
-                    <p><strong>Ventas:</strong></p>
-                    <p>Nro 1 → 3 × Remera → $1000 c/u Total $3000 → Comisión: $300</p>
-                    <p>Nro 2 → 2 × Gorra → $750 c/u Total $1500 → Comisión: $150</p>
-                    <button type="button" class="btn-agregar">Aceptar</button>
-                </div>
-            </article>
+    <article class="article-tabla">
+      <h3>Tabla de artículos</h3>
+      <table>
+        <thead>
+          <tr>
+            <th><button type="button" class="btn-ordenar">Código ↕</button></th>
+            <th>Descripción</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>mesa</td>
+            <td>mesa moderna</td>
+            <td>8000</td>
+          </tr>
+          <tr>
+            <td>Silla ⭐</td>
+            <td>Silla para comedor</td>
+            <td>3000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="leyenda">
+        Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)
+      </p>
+    </article>
 
-        </section>
+  </section>
 
-        <!-- SECTION ARTÍCULOS -->
-        <section id="articulos">
+  <!-- ===================== SECTION VENTAS ===================== -->
+  <section id="ventas">
+    <h2>Ventas</h2>
 
-            <h2>Artículos</h2>
+    <article class="article-alta">
+      <h3>Alta de ventas</h3>
+      <button type="button" class="btn-agregar">Agregar venta</button>
+    </article>
 
-            <article class="article-alta">
-                <h3>Alta de Artículo</h3>
-                <button type="button" class="btn-agregar">Agregar artículo</button>
-            </article>
+    <article class="article-form">
+      <h3>Datos de la venta a agregar</h3>
+      <fieldset>
+        <legend>Venta</legend>
+        <form>
+          <label for="nroVenta">Nro</label>
+          <input type="text" id="nroVenta" value="3" disabled>
 
-            <article class="article-form">
-                <h3>Datos del artículo a agregar</h3>
+          <label for="articuloVenta">Artículo</label>
+          <select id="articuloVenta">
+            <option value="A001">A001</option>
+            <option value="A002">A002</option>
+            <option value="A003">A003</option>
+          </select>
 
-                <fieldset>
-                    <legend>Artículo</legend>
+          <label for="influencerVenta">Influencer</label>
+          <select id="influencerVenta">
+            <option value="ana">Ana Pérez</option>
+            <option value="juan">Juan Gómez</option>
+          </select>
 
-                    <form>
-                        <label for="codigoArt">Código</label>
-                        <input type="text" id="codigoArt" placeholder="Ej: A001">
+          <label for="cantidadVenta">Cantidad</label>
+          <input type="number" id="cantidadVenta" placeholder="Ej: 2" min="1">
 
-                        <label for="descArt">Descripción</label>
-                        <input type="text" id="descArt" placeholder="Ej: Remera algodón básica">
+          <label for="medioVenta">Medio</label>
+          <select id="medioVenta">
+            <option value="1">1-Instagram</option>
+            <option value="2">2-YouTube</option>
+            <option value="3">3-X</option>
+            <option value="4">4-TikTok</option>
+            <option value="5">5-Facebook</option>
+            <option value="6">6-Otras</option>
+          </select>
 
-                        <label for="precioArt">Precio</label>
-                        <input type="number" id="precioArt" placeholder="Ej: 1000" min="0">
+          <button type="button" class="btn-cancelar">Cancelar</button>
+          <button type="button" class="btn-agregar">Agregar</button>
+        </form>
+      </fieldset>
+    </article>
 
-                        <button type="button" class="btn-cancelar">Cancelar</button>
-                        <button type="button" class="btn-agregar">Agregar</button>
-                    </form>
-                </fieldset>
-            </article>
+    <article class="article-tabla">
+      <h3>Tabla de ventas (ordenada por número de venta)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nro Venta</th>
+            <th>Código de Artículo</th>
+            <th>Nombre de influencer</th>
+            <th>Cantidad</th>
+            <th>Medio</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2</td>
+            <td>Silla</td>
+            <td>Ana García</td>
+            <td>1</td>
+            <td>1-Instagram</td>
+            <td><button type="button" class="btn-eliminar">✕</button></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>mesa</td>
+            <td>Beatriz Lopez</td>
+            <td>3</td>
+            <td>3-X</td>
+            <td><button type="button" class="btn-eliminar">✕</button></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Silla</td>
+            <td>Ana García</td>
+            <td>2</td>
+            <td>1-Instagram</td>
+            <td><button type="button" class="btn-eliminar">✕</button></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Silla</td>
+            <td>Ana García</td>
+            <td>1</td>
+            <td>5-Facebook</td>
+            <td><button type="button" class="btn-eliminar">✕</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
 
-            <article class="article-tabla">
-                <h3>Tabla de Artículos</h3>
+    <article class="article-grafico">
+      <h3>Gráfico de burbujas</h3>
+      <div class="grafico-placeholder">
+        <div class="burbuja-contenedor">
+          <div class="burbuja burbuja-grande">9000</div>
+          <p>1 - Instagram</p>
+        </div>
+        <div class="burbuja-contenedor">
+          <div class="burbuja burbuja-chica">0</div>
+          <p>2 - YouTube</p>
+        </div>
+        <div class="burbuja-contenedor">
+          <div class="burbuja burbuja-max">24000</div>
+          <p>3 - X</p>
+        </div>
+        <div class="burbuja-contenedor">
+          <div class="burbuja burbuja-chica">0</div>
+          <p>4 - TikTok</p>
+        </div>
+        <div class="burbuja-contenedor">
+          <div class="burbuja burbuja-med">3000</div>
+          <p>5 - Facebook</p>
+        </div>
+        <div class="burbuja-contenedor">
+          <div class="burbuja burbuja-chica">0</div>
+          <p>6 - Otras</p>
+        </div>
+      </div>
+    </article>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th><button type="button" class="btn-ordenar">Código ↕</button></th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Medalla</th>
-                        </tr>
-                    </thead>
+  </section>
 
-                    <tbody>
-                        <tr>
-                            <td>A001</td>
-                            <td>Remera algodón básica</td>
-                            <td>$1000</td>
-                            <td>⭐</td>
-                        </tr>
+</main>
 
-                        <tr>
-                            <td>A002</td>
-                            <td>Gorra deportiva</td>
-                            <td>$750</td>
-                            <td>-</td>
-                        </tr>
-
-                        <tr>
-                            <td>A003</td>
-                            <td>Mochila urbana</td>
-                            <td>$2500</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <p class="leyenda">
-                    Información: ⭐ Artículo más vendido (mayor cantidad de unidades vendidas)
-                </p>
-            </article>
-
-        </section>
-
-        <!-- SECTION VENTAS -->
-        <section id="ventas">
-
-            <h2>Ventas</h2>
-
-            <article class="article-alta">
-                <h3>Alta de ventas</h3>
-                <button type="button" class="btn-agregar">Agregar venta</button>
-            </article>
-
-            <article class="article-form">
-                <h3>Datos de la venta a agregar</h3>
-
-                <fieldset>
-                    <legend>Venta</legend>
-
-                    <form>
-                        <label for="nroVenta">Nro</label>
-                        <input type="text" id="nroVenta" value="3" disabled>
-
-                        <label for="articuloVenta">Artículo</label>
-                        <select id="articuloVenta">
-                            <option value="A001">A001</option>
-                            <option value="A002">A002</option>
-                            <option value="A003">A003</option>
-                        </select>
-
-                        <label for="influencerVenta">Influencer</label>
-                        <select id="influencerVenta">
-                            <option value="ana">Ana García</option>
-                            <option value="juan">Juan Pérez</option>
-                            <option value="maria">María López</option>
-                        </select>
-
-                        <label for="cantidadVenta">Cantidad</label>
-                        <input type="number" id="cantidadVenta" placeholder="Ej: 2" min="1">
-
-                        <label for="medioVenta">Medio</label>
-                        <select id="medioVenta">
-                            <option value="1">1-Instagram</option>
-                            <option value="2">2-YouTube</option>
-                            <option value="3">3-X</option>
-                            <option value="4">4-TikTok</option>
-                            <option value="5">5-Facebook</option>
-                            <option value="6">6-Otras</option>
-                        </select>
-
-                        <button type="button" class="btn-cancelar">Cancelar</button>
-                        <button type="button" class="btn-agregar">Agregar</button>
-                    </form>
-                </fieldset>
-            </article>
-
-            <article class="article-tabla">
-                <h3>Tabla de Ventas</h3>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Número</th>
-                            <th>Artículo</th>
-                            <th>Influencer</th>
-                            <th>Medio</th>
-                            <th>Cantidad</th>
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>A001</td>
-                            <td>Ana García</td>
-                            <td>1-Instagram</td>
-                            <td>3</td>
-                            <td><button type="button" class="btn-eliminar">✕</button></td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>A002</td>
-                            <td>Juan Pérez</td>
-                            <td>2-YouTube</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn-eliminar">✕</button></td>
-                        </tr>
-
-                        <tr>
-                            <td>3</td>
-                            <td>A003</td>
-                            <td>María López</td>
-                            <td>4-TikTok</td>
-                            <td>5</td>
-                            <td><button type="button" class="btn-eliminar">✕</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </article>
-
-            <article class="article-grafico">
-                <h3>Gráfico de burbujas</h3>
-                <div class="grafico-placeholder">
-                    <div class="burbuja-contenedor">
-                        <div class="burbuja burbuja-grande">9000</div>
-                        <p>1 - Instagram</p>
-                    </div>
-                    <div class="burbuja-contenedor">
-                        <div class="burbuja burbuja-chica">0</div>
-                        <p>2 - YouTube</p>
-                    </div>
-                    <div class="burbuja-contenedor">
-                        <div class="burbuja burbuja-max">24000</div>
-                        <p>3 - X</p>
-                    </div>
-                    <div class="burbuja-contenedor">
-                        <div class="burbuja burbuja-chica">0</div>
-                        <p>4 - TikTok</p>
-                    </div>
-                    <div class="burbuja-contenedor">
-                        <div class="burbuja burbuja-med">3000</div>
-                        <p>5 - Facebook</p>
-                    </div>
-                    <div class="burbuja-contenedor">
-                        <div class="burbuja burbuja-chica">0</div>
-                        <p>6 - Otras</p>
-                    </div>
-                </div>
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>
-            Mara Maqueira -
-            <a href="https://www.ort.edu.uy" target="_blank">ORT Uruguay</a>
-        </p>
-        <p>
-            Brian del Pino -
-            <a href="https://www.ort.edu.uy" target="_blank">ORT Uruguay</a>
-        </p>
-    </footer>
+<footer>
+  <p>
+    Mara Maqueira - Estudiante ORT Uruguay -
+    <a href="https://www.ort.edu.uy" target="_blank" rel="noopener">ORT Uruguay</a>
+  </p>
+  <p>
+    Brian del Pino - Estudiante ORT Uruguay -
+    <a href="https://www.ort.edu.uy" target="_blank" rel="noopener">ORT Uruguay</a>
+  </p>
+</footer>
 
 </body>
-
 </html>
