@@ -2,124 +2,63 @@
   Autores:
   Mara Maqueira
   Brian del Pino
+  Materia: Programación I - ORT Uruguay
 */
 
-/* ============================================================
-   VARIABLES Y RESET
-   ============================================================ */
+/* ===== RESET Y BASE ===== */
 
-:root {
-  --color-primario: #1a9fa8;
-  --color-primario-oscuro: #14858d;
-  --color-primario-claro: #e8f7f8;
-  --color-acento: #17b8c3;
-  --color-fondo: #f4f6f7;
-  --color-fondo-section: #ffffff;
-  --color-fondo-article: #f9fbfb;
-  --color-borde: #d0dfe0;
-  --color-texto: #2c3e40;
-  --color-texto-suave: #5a7070;
-  --color-btn-cancelar: #9eacac;
-  --color-btn-cancelar-hover: #7f9090;
-  --color-btn-eliminar: #e05252;
-  --color-btn-eliminar-hover: #c73c3c;
-  --color-encabezado-tabla: #1a9fa8;
-  --color-fila-par: #f0f8f9;
-  --radio-borde: 6px;
-  --sombra-suave: 0 2px 8px rgba(26, 159, 168, 0.10);
-  --sombra-section: 0 2px 12px rgba(0, 0, 0, 0.07);
-  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ============================================================
-   BASE
-   ============================================================ */
-
 body {
-  font-family: var(--fuente-principal);
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  background-color: #d9d9d9;
+  color: #222;
 }
 
-/* ============================================================
-   HEADER
-   ============================================================ */
+/* ===== HEADER ===== */
 
 header {
-  background-color: var(--color-primario);
+  background-color: #555555;
   color: #ffffff;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-header h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-header p {
-  font-size: 0.85rem;
-  opacity: 0.88;
-}
-
-/* ============================================================
-   MAIN
-   ============================================================ */
+/* ===== MAIN ===== */
 
 main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  padding: 10px 12px;
 }
 
-/* ============================================================
-   SECTIONS
-   ============================================================ */
+/* ===== SECTIONS ===== */
 
 section {
-  background-color: var(--color-fondo-section);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-  box-shadow: var(--sombra-section);
-  padding: 1.5rem;
+  background-color: #ececec;
+  border: 1px solid #bbbbbb;
+  margin-bottom: 12px;
+  padding: 10px 12px;
 }
 
 section > h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-texto);
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-primario-claro);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #222;
 }
 
-/* ============================================================
-   ARTICLES
-   ============================================================ */
+/* ===== ARTICLES ===== */
 
 article {
-  background-color: var(--color-fondo-article);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-  padding: 1.1rem 1.25rem;
-  margin-bottom: 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  margin-bottom: 8px;
+  padding: 8px 10px;
 }
 
 article:last-child {
@@ -127,379 +66,253 @@ article:last-child {
 }
 
 article h3 {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--color-texto-suave);
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
 }
 
-/* ============================================================
-   FIELDSET Y LEGEND
-   ============================================================ */
+/* ===== FIELDSET Y LEGEND ===== */
 
 fieldset {
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-  padding: 0.9rem 1rem;
+  border: 1px solid #bbbbbb;
+  padding: 6px 10px;
   background-color: #ffffff;
 }
 
 legend {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--color-primario);
-  padding: 0 0.4rem;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 4px;
+  color: #222;
 }
 
-/* ============================================================
-   FORMULARIOS
-   ============================================================ */
+/* ===== FORMULARIOS ===== */
 
 form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 0.75rem;
+  gap: 4px 6px;
 }
 
 label {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--color-texto-suave);
-  white-space: nowrap;
+  font-size: 12px;
+  color: #333;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
 select {
-  border: 1px solid var(--color-borde);
-  border-radius: 4px;
-  padding: 0.4rem 0.6rem;
-  font-size: 0.88rem;
-  font-family: var(--fuente-principal);
-  color: var(--color-texto);
+  border: 1px solid #aaaaaa;
+  padding: 3px 5px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
   background-color: #ffffff;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  min-width: 100px;
+  color: #222;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 select:focus {
-  outline: none;
-  border-color: var(--color-primario);
-  box-shadow: 0 0 0 3px rgba(26, 159, 168, 0.15);
+  outline: 1px solid #17a8b0;
 }
 
-input[type="text"][disabled],
-input[type="number"][disabled] {
-  background-color: #eef2f2;
-  color: var(--color-texto-suave);
-  cursor: not-allowed;
+input[disabled] {
+  background-color: #eeeeee;
+  color: #666;
 }
 
-/* ============================================================
-   BOTONES
-   ============================================================ */
+/* ===== BOTONES ===== */
 
 button {
-  font-family: var(--fuente-principal);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
   border: none;
-  border-radius: 4px;
-  padding: 0.42rem 0.9rem;
+  padding: 4px 10px;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
-  white-space: nowrap;
+  border-radius: 3px;
 }
 
-button:active {
-  transform: scale(0.97);
-}
-
-/* Botón principal (Agregar, Aceptar) */
 .btn-agregar {
-  background-color: var(--color-primario);
+  background-color: #17a8b0;
   color: #ffffff;
 }
 
 .btn-agregar:hover {
-  background-color: var(--color-primario-oscuro);
+  background-color: #138f96;
 }
 
-/* Botón cancelar */
 .btn-cancelar {
-  background-color: var(--color-btn-cancelar);
+  background-color: #aaaaaa;
   color: #ffffff;
 }
 
 .btn-cancelar:hover {
-  background-color: var(--color-btn-cancelar-hover);
+  background-color: #888888;
 }
 
-/* Botón eliminar (×) */
 .btn-eliminar {
-  background-color: var(--color-btn-eliminar);
+  background-color: #d9534f;
   color: #ffffff;
-  padding: 0.35rem 0.65rem;
-  font-size: 0.8rem;
+  padding: 3px 8px;
+  font-size: 11px;
 }
 
 .btn-eliminar:hover {
-  background-color: var(--color-btn-eliminar-hover);
+  background-color: #b52b27;
 }
 
-/* Botón ventas (detalle) */
 .btn-ventas {
-  background-color: var(--color-primario);
+  background-color: #17a8b0;
   color: #ffffff;
-  font-size: 0.8rem;
+  font-size: 11px;
+  padding: 3px 8px;
 }
 
 .btn-ventas:hover {
-  background-color: var(--color-primario-oscuro);
+  background-color: #138f96;
 }
 
-/* Botón ordenar (en header de tabla) */
 .btn-ordenar {
-  background-color: var(--color-primario);
+  background-color: #17a8b0;
   color: #ffffff;
-  font-size: 0.82rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 4px;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-ordenar:hover {
-  background-color: var(--color-primario-oscuro);
+  background-color: #138f96;
 }
 
-/* ============================================================
-   TABLAS
-   ============================================================ */
+/* ===== TABLAS ===== */
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88rem;
-  margin-bottom: 0.5rem;
+  font-size: 12px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
 }
 
 thead {
-  background-color: var(--color-encabezado-tabla);
+  background-color: #17a8b0;
   color: #ffffff;
 }
 
 thead th {
-  padding: 0.6rem 0.8rem;
+  padding: 5px 8px;
   text-align: left;
-  font-weight: 600;
-  font-size: 0.84rem;
-  letter-spacing: 0.02em;
-}
-
-tbody tr {
-  border-bottom: 1px solid var(--color-borde);
-  transition: background-color 0.15s;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--color-fila-par);
+  background-color: #f0f0f0;
 }
 
 tbody tr:hover {
-  background-color: #ddf0f1;
+  background-color: #e0f4f5;
 }
 
 tbody td {
-  padding: 0.55rem 0.8rem;
-  color: var(--color-texto);
-  vertical-align: middle;
+  padding: 4px 8px;
+  border-bottom: 1px solid #dddddd;
+  color: #222;
 }
 
-/* ============================================================
-   LEYENDA / INFORMACIÓN
-   ============================================================ */
+/* ===== LEYENDA ===== */
 
 .leyenda {
-  font-size: 0.8rem;
-  color: var(--color-texto-suave);
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.5rem;
-  background-color: var(--color-primario-claro);
-  border-radius: 4px;
-  border-left: 3px solid var(--color-primario);
+  font-size: 11px;
+  color: #555;
+  margin-top: 4px;
 }
 
-/* ============================================================
-   POPUP SIMULADO
-   ============================================================ */
+/* ===== POPUP SIMULADO ===== */
 
 .popup-simulado {
   background-color: #ffffff;
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-  padding: 1rem 1.2rem;
-  max-width: 460px;
-  box-shadow: var(--sombra-suave);
-  font-size: 0.87rem;
+  border: 1px solid #aaaaaa;
+  padding: 10px 14px;
+  max-width: 420px;
+  font-size: 12px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 }
 
 .popup-simulado p {
-  margin-bottom: 0.3rem;
-  color: var(--color-texto);
-}
-
-.popup-simulado strong {
-  color: var(--color-primario);
+  margin-bottom: 3px;
+  color: #222;
 }
 
 .popup-simulado button {
-  margin-top: 0.75rem;
+  margin-top: 8px;
 }
 
-/* ============================================================
-   GRÁFICO DE BURBUJAS (visual estático)
-   ============================================================ */
+/* ===== GRÁFICO DE BURBUJAS ===== */
 
 .grafico-placeholder {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  gap: 0.5rem;
-  padding: 1.5rem 0.5rem 0.75rem;
+  padding: 16px 8px 8px;
   min-height: 120px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
 }
 
 .burbuja-contenedor {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 6px;
   flex: 1;
 }
 
 .burbuja-contenedor p {
-  font-size: 0.78rem;
-  color: var(--color-texto-suave);
+  font-size: 11px;
+  color: #444;
   text-align: center;
 }
 
-/* Tamaños de burbujas estáticas */
 .burbuja {
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: bold;
   color: #ffffff;
-  background-color: var(--color-primario);
+  background-color: #17a8b0;
 }
 
-.burbuja-chica {
-  width: 20px;
-  height: 20px;
-  font-size: 0.6rem;
-}
+.burbuja-chica  { width: 20px;  height: 20px;  font-size: 9px; }
+.burbuja-med    { width: 44px;  height: 44px; }
+.burbuja-grande { width: 64px;  height: 64px; }
+.burbuja-max    { width: 90px;  height: 90px;  font-size: 11px; }
 
-.burbuja-med {
-  width: 44px;
-  height: 44px;
-}
-
-.burbuja-grande {
-  width: 64px;
-  height: 64px;
-}
-
-.burbuja-max {
-  width: 90px;
-  height: 90px;
-  font-size: 0.75rem;
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* ===== FOOTER ===== */
 
 footer {
-  background-color: var(--color-texto);
-  color: #ccdcdc;
-  padding: 1.25rem 2rem;
+  background-color: #444444;
+  color: #dddddd;
+  padding: 10px 14px;
+  font-size: 12px;
   text-align: center;
-  font-size: 0.85rem;
   line-height: 1.8;
-  margin-top: 1rem;
-}
-
-footer p {
-  margin-bottom: 0.2rem;
 }
 
 footer a {
-  color: var(--color-acento);
+  color: #17a8b0;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
 }
 
 footer a:hover {
-  color: #ffffff;
   text-decoration: underline;
-}
-
-/* ============================================================
-   UTILIDADES DE ACCESIBILIDAD
-   ============================================================ */
-
-:focus-visible {
-  outline: 2px dashed var(--color-primario);
-  outline-offset: 2px;
-}
-
-/* ============================================================
-   RESPONSIVE - pantallas medianas
-   ============================================================ */
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-  }
-
-  main {
-    padding: 0 0.75rem;
-  }
-
-  form {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  select {
-    width: 100%;
-  }
-
-  table {
-    font-size: 0.8rem;
-  }
-
-  thead th,
-  tbody td {
-    padding: 0.45rem 0.5rem;
-  }
-
-  .grafico-placeholder {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  color: #ffffff;
 }
