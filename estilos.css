@@ -1,242 +1,197 @@
-/*==================================
-AUTORES:
-Mara Maqueira
-Brian del Pino
-==================================*/
+/*
+    Autor: Brian del Pino
+    Materia: Programación I
+    Obligatorio 1 - CSS parcial (header, footer, botones, formularios)
+*/
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ===== HEADER ===== */
+header {
+    background-color: #2a9d8f;
+    color: #ffffff;
+    padding: 16px 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-body{
-    background:#d8d8d8;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:11px;
-    color:#222;
+header h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 4px;
 }
 
-/* HEADER */
-
-header{
-    background:#7a7a7a;
-    height:26px;
-    line-height:26px;
-    padding-left:10px;
+header p {
+    font-size: 0.85rem;
+    opacity: 0.85;
 }
 
-header h1{
-    font-size:13px;
-    font-weight:bold;
-    color:black;
+/* ===== FOOTER ===== */
+footer {
+    background-color: #2d3748;
+    color: #a0aec0;
+    padding: 16px 24px;
+    text-align: center;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* CONTENIDO */
-
-main{
-    width:98%;
-    margin:8px auto;
+footer p {
+    line-height: 1.8;
 }
 
-/* SECCIONES */
-
-section{
-    padding:8px 0;
-    border-bottom:8px solid #707070;
+footer a {
+    color: #2a9d8f;
+    text-decoration: none;
 }
 
-section:last-child{
-    border-bottom:none;
+footer a:hover {
+    text-decoration: underline;
+    color: #38b2a3;
 }
 
-/* TITULOS */
-
-h2{
-    font-size:13px;
-    margin:5px 0 8px 10px;
-    font-weight:bold;
+/* ===== BOTONES - BASE ===== */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
-h3{
-    font-size:10px;
-    margin-bottom:6px;
-    font-weight:bold;
+/* Botón agregar (teal) */
+.btn-agregar {
+    background-color: #2a9d8f;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(42, 157, 143, 0.3);
 }
 
-/* BLOQUES */
-
-.article-alta,
-.article-form,
-.article-tabla,
-.article-grafico{
-    background:white;
-    margin:8px;
-    padding:10px;
-    border:1px solid #d4d4d4;
+.btn-agregar:hover {
+    background-color: #21867a;
+    box-shadow: 0 4px 8px rgba(42, 157, 143, 0.4);
+    transform: translateY(-1px);
 }
 
-/* BOTONES */
-
-.btn-agregar,
-.btn-cancelar,
-.btn-ventas,
-.btn-ordenar,
-.btn-eliminar{
-    background:#18a8b6;
-    color:white;
-    border:none;
-    border-radius:3px;
-    font-size:10px;
-    padding:4px 12px;
-    cursor:pointer;
+.btn-agregar:active {
+    transform: translateY(0);
 }
 
-.btn-eliminar{
-    padding:3px 7px;
+/* Botón cancelar (gris) */
+.btn-cancelar {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* FORMULARIOS */
-
-fieldset{
-    border:none;
+.btn-cancelar:hover {
+    background-color: #cbd5e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
 }
 
-legend{
-    display:none;
+/* Botón ver detalle / ventas */
+.btn-ventas {
+    background-color: #2a9d8f;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    box-shadow: 0 1px 3px rgba(42, 157, 143, 0.3);
 }
 
-form{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    flex-wrap:wrap;
+.btn-ventas:hover {
+    background-color: #21867a;
+    transform: translateY(-1px);
 }
 
-label{
-    font-size:10px;
+/* Botón eliminar (rojo) */
+.btn-eliminar {
+    background-color: #e53e3e;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgba(229, 62, 62, 0.3);
 }
 
-input,
-select{
-    height:18px;
-    border:1px solid #999;
-    background:white;
-    font-size:10px;
-    padding:2px 4px;
+.btn-eliminar:hover {
+    background-color: #c53030;
+    box-shadow: 0 2px 6px rgba(229, 62, 62, 0.4);
+    transform: translateY(-1px);
 }
 
-#nombreInf,
-#mailInf,
-#descArt{
-    width:120px;
+/* Botón ordenar */
+.btn-ordenar {
+    background-color: #2a9d8f;
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 0.78rem;
+    border-radius: 4px;
 }
 
-#comisionInf,
-#precioArt,
-#cantidadVenta{
-    width:55px;
+.btn-ordenar:hover {
+    background-color: #21867a;
+    transform: translateY(-1px);
 }
 
-#codigoArt{
-    width:65px;
+/* ===== FORMULARIOS - INPUTS Y SELECTS ===== */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select {
+    padding: 6px 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    color: #2d3748;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-width: 120px;
 }
 
-/* TABLAS */
-
-table{
-    border-collapse:collapse;
-    background:white;
-    margin-top:8px;
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.15);
 }
 
-th{
-    background:#d7d7d7;
-    border:1px solid #7e7e7e;
-    padding:4px 8px;
-    font-size:10px;
+form input:disabled {
+    background-color: #edf2f7;
+    color: #a0aec0;
+    cursor: not-allowed;
 }
 
-td{
-    border:1px solid #7e7e7e;
-    padding:4px 8px;
-    font-size:10px;
+form select {
+    cursor: pointer;
 }
 
-tbody tr{
-    background:white;
+/* ===== BORDES Y SOMBRAS - SECTIONS Y ARTICLES ===== */
+section {
+    border: 1px solid #dde2e8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 0.2s ease;
 }
 
-/* LEYENDAS */
-
-.leyenda{
-    margin-top:8px;
-    font-size:9px;
+section:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-/* GRAFICO */
-
-.grafico-placeholder{
-    display:flex;
-    justify-content:space-around;
-    align-items:flex-end;
-    min-height:150px;
+article {
+    border: 1px solid #e8edf2;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.burbuja{
-    border-radius:50%;
-    background:#18a8b6;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    font-weight:bold;
+fieldset {
+    border: 1px solid #dde2e8;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.burbuja-chica{
-    width:30px;
-    height:30px;
-}
-
-.burbuja-med{
-    width:55px;
-    height:55px;
-}
-
-.burbuja-grande{
-    width:75px;
-    height:75px;
-}
-
-.burbuja-max{
-    width:95px;
-    height:95px;
-}
-
-.burbuja-contenedor{
-    text-align:center;
-}
-
-.burbuja-contenedor p{
-    margin-top:4px;
-    font-size:9px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#7a7a7a;
-    padding:10px;
-    margin-top:10px;
-}
-
-footer p{
-    font-size:10px;
-    color:black;
-    margin-bottom:3px;
-}
-
-footer a{
-    color:#005d9e;
-}
