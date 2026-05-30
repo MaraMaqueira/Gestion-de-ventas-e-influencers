@@ -1,197 +1,505 @@
 /*
-    Autor: Brian del Pino
-    Materia: Programación I
-    Obligatorio 1 - CSS parcial (header, footer, botones, formularios)
+  Autores:
+  Mara Maqueira
+  Brian del Pino
 */
 
-/* ===== HEADER ===== */
+/* ============================================================
+   VARIABLES Y RESET
+   ============================================================ */
+
+:root {
+  --color-primario: #1a9fa8;
+  --color-primario-oscuro: #14858d;
+  --color-primario-claro: #e8f7f8;
+  --color-acento: #17b8c3;
+  --color-fondo: #f4f6f7;
+  --color-fondo-section: #ffffff;
+  --color-fondo-article: #f9fbfb;
+  --color-borde: #d0dfe0;
+  --color-texto: #2c3e40;
+  --color-texto-suave: #5a7070;
+  --color-btn-cancelar: #9eacac;
+  --color-btn-cancelar-hover: #7f9090;
+  --color-btn-eliminar: #e05252;
+  --color-btn-eliminar-hover: #c73c3c;
+  --color-encabezado-tabla: #1a9fa8;
+  --color-fila-par: #f0f8f9;
+  --radio-borde: 6px;
+  --sombra-suave: 0 2px 8px rgba(26, 159, 168, 0.10);
+  --sombra-section: 0 2px 12px rgba(0, 0, 0, 0.07);
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
 header {
-    background-color: #2a9d8f;
-    color: #ffffff;
-    padding: 16px 24px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-primario);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 header p {
-    font-size: 0.85rem;
-    opacity: 0.85;
+  font-size: 0.85rem;
+  opacity: 0.88;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    background-color: #2d3748;
-    color: #a0aec0;
-    padding: 16px 24px;
-    text-align: center;
-    font-size: 0.85rem;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-footer p {
-    line-height: 1.8;
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+section {
+  background-color: var(--color-fondo-section);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-section);
+  padding: 1.5rem;
 }
 
-footer a {
-    color: #2a9d8f;
-    text-decoration: none;
+section > h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primario-claro);
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: #38b2a3;
+/* ============================================================
+   ARTICLES
+   ============================================================ */
+
+article {
+  background-color: var(--color-fondo-article);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
 }
 
-/* ===== BOTONES - BASE ===== */
+article:last-child {
+  margin-bottom: 0;
+}
+
+article h3 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-texto-suave);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   FIELDSET Y LEGEND
+   ============================================================ */
+
+fieldset {
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 0.9rem 1rem;
+  background-color: #ffffff;
+}
+
+legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primario);
+  padding: 0 0.4rem;
+}
+
+/* ============================================================
+   FORMULARIOS
+   ============================================================ */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-texto-suave);
+  white-space: nowrap;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.88rem;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  min-width: 100px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(26, 159, 168, 0.15);
+}
+
+input[type="text"][disabled],
+input[type="number"][disabled] {
+  background-color: #eef2f2;
+  color: var(--color-texto-suave);
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+
 button {
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    font-size: 0.82rem;
-    font-weight: 500;
-    padding: 6px 14px;
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  font-family: var(--fuente-principal);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  padding: 0.42rem 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  white-space: nowrap;
 }
 
-/* Botón agregar (teal) */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Botón principal (Agregar, Aceptar) */
 .btn-agregar {
-    background-color: #2a9d8f;
-    color: #ffffff;
-    box-shadow: 0 2px 4px rgba(42, 157, 143, 0.3);
+  background-color: var(--color-primario);
+  color: #ffffff;
 }
 
 .btn-agregar:hover {
-    background-color: #21867a;
-    box-shadow: 0 4px 8px rgba(42, 157, 143, 0.4);
-    transform: translateY(-1px);
+  background-color: var(--color-primario-oscuro);
 }
 
-.btn-agregar:active {
-    transform: translateY(0);
-}
-
-/* Botón cancelar (gris) */
+/* Botón cancelar */
 .btn-cancelar {
-    background-color: #e2e8f0;
-    color: #4a5568;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-btn-cancelar);
+  color: #ffffff;
 }
 
 .btn-cancelar:hover {
-    background-color: #cbd5e0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    transform: translateY(-1px);
+  background-color: var(--color-btn-cancelar-hover);
 }
 
-/* Botón ver detalle / ventas */
-.btn-ventas {
-    background-color: #2a9d8f;
-    color: #ffffff;
-    padding: 4px 10px;
-    font-size: 0.78rem;
-    box-shadow: 0 1px 3px rgba(42, 157, 143, 0.3);
-}
-
-.btn-ventas:hover {
-    background-color: #21867a;
-    transform: translateY(-1px);
-}
-
-/* Botón eliminar (rojo) */
+/* Botón eliminar (×) */
 .btn-eliminar {
-    background-color: #e53e3e;
-    color: #ffffff;
-    padding: 4px 10px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    box-shadow: 0 1px 3px rgba(229, 62, 62, 0.3);
+  background-color: var(--color-btn-eliminar);
+  color: #ffffff;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
 }
 
 .btn-eliminar:hover {
-    background-color: #c53030;
-    box-shadow: 0 2px 6px rgba(229, 62, 62, 0.4);
-    transform: translateY(-1px);
+  background-color: var(--color-btn-eliminar-hover);
 }
 
-/* Botón ordenar */
+/* Botón ventas (detalle) */
+.btn-ventas {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.btn-ventas:hover {
+  background-color: var(--color-primario-oscuro);
+}
+
+/* Botón ordenar (en header de tabla) */
 .btn-ordenar {
-    background-color: #2a9d8f;
-    color: #ffffff;
-    padding: 5px 12px;
-    font-size: 0.78rem;
-    border-radius: 4px;
+  background-color: var(--color-primario);
+  color: #ffffff;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
 }
 
 .btn-ordenar:hover {
-    background-color: #21867a;
-    transform: translateY(-1px);
+  background-color: var(--color-primario-oscuro);
 }
 
-/* ===== FORMULARIOS - INPUTS Y SELECTS ===== */
-form input[type="text"],
-form input[type="email"],
-form input[type="number"],
-form select {
-    padding: 6px 10px;
-    border: 1px solid #cbd5e0;
-    border-radius: 4px;
-    font-size: 0.82rem;
-    color: #2d3748;
-    background-color: #ffffff;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    min-width: 120px;
+/* ============================================================
+   TABLAS
+   ============================================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="number"]:focus,
-form select:focus {
-    outline: none;
-    border-color: #2a9d8f;
-    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.15);
+thead {
+  background-color: var(--color-encabezado-tabla);
+  color: #ffffff;
 }
 
-form input:disabled {
-    background-color: #edf2f7;
-    color: #a0aec0;
-    cursor: not-allowed;
+thead th {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.84rem;
+  letter-spacing: 0.02em;
 }
 
-form select {
-    cursor: pointer;
+tbody tr {
+  border-bottom: 1px solid var(--color-borde);
+  transition: background-color 0.15s;
 }
 
-/* ===== BORDES Y SOMBRAS - SECTIONS Y ARTICLES ===== */
-section {
-    border: 1px solid #dde2e8;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-    transition: box-shadow 0.2s ease;
+tbody tr:nth-child(even) {
+  background-color: var(--color-fila-par);
 }
 
-section:hover {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+tbody tr:hover {
+  background-color: #ddf0f1;
 }
 
-article {
-    border: 1px solid #e8edf2;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+tbody td {
+  padding: 0.55rem 0.8rem;
+  color: var(--color-texto);
+  vertical-align: middle;
 }
 
-fieldset {
-    border: 1px solid #dde2e8;
-    border-radius: 6px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+/* ============================================================
+   LEYENDA / INFORMACIÓN
+   ============================================================ */
+
+.leyenda {
+  font-size: 0.8rem;
+  color: var(--color-texto-suave);
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  background-color: var(--color-primario-claro);
+  border-radius: 4px;
+  border-left: 3px solid var(--color-primario);
 }
 
+/* ============================================================
+   POPUP SIMULADO
+   ============================================================ */
+
+.popup-simulado {
+  background-color: #ffffff;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 1rem 1.2rem;
+  max-width: 460px;
+  box-shadow: var(--sombra-suave);
+  font-size: 0.87rem;
+}
+
+.popup-simulado p {
+  margin-bottom: 0.3rem;
+  color: var(--color-texto);
+}
+
+.popup-simulado strong {
+  color: var(--color-primario);
+}
+
+.popup-simulado button {
+  margin-top: 0.75rem;
+}
+
+/* ============================================================
+   GRÁFICO DE BURBUJAS (visual estático)
+   ============================================================ */
+
+.grafico-placeholder {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding: 1.5rem 0.5rem 0.75rem;
+  min-height: 120px;
+}
+
+.burbuja-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.burbuja-contenedor p {
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+  text-align: center;
+}
+
+/* Tamaños de burbujas estáticas */
+.burbuja {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--color-primario);
+}
+
+.burbuja-chica {
+  width: 20px;
+  height: 20px;
+  font-size: 0.6rem;
+}
+
+.burbuja-med {
+  width: 44px;
+  height: 44px;
+}
+
+.burbuja-grande {
+  width: 64px;
+  height: 64px;
+}
+
+.burbuja-max {
+  width: 90px;
+  height: 90px;
+  font-size: 0.75rem;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  background-color: var(--color-texto);
+  color: #ccdcdc;
+  padding: 1.25rem 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+footer p {
+  margin-bottom: 0.2rem;
+}
+
+footer a {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   UTILIDADES DE ACCESIBILIDAD
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px dashed var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   RESPONSIVE - pantallas medianas
+   ============================================================ */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  main {
+    padding: 0 0.75rem;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  thead th,
+  tbody td {
+    padding: 0.45rem 0.5rem;
+  }
+
+  .grafico-placeholder {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
